@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\pages;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,3 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('main');
 });
+
+Route::get('/dashboard', [pages::class, 'dashboard']);
+Route::get('/layanan', [pages::class,'layanan']);
+
+// Route::get('/layanan', function () {
+//     return view('layanan.layanan');
+// });

@@ -1,15 +1,21 @@
 <div class="side">
-    <div class="logo d-flex align-items-center gap-3">
+    <div class="logo d-flex w-100 align-items-center gap-3">
         <img src="/img/Vector.png" alt="Logo" />
         Bayu Tirta 
     </div>
-    <div class="divider"></div>
+    <div class="divider w-100"></div>
     <div class="menu w-100 gap-2">
-        <a href="#" class="menu-col d-flex w-100 align-items-center gap-3 p-3" >
+        <a
+            href="/dashboard"
+            class=" menu-col d-flex w-100 align-items-center gap-3 p-3
+            {{ Request::is('dashboard') ? 'active' : '' }} ">
             <ion-icon name="grid"></ion-icon>
             Dashboard
         </a>
-        <a href="/layanan" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
+        <a
+            href="/layanan"
+            class="menu-col d-flex w-100 align-items-center gap-3 p-3
+            {{ Request::is('layanan') ? 'active' : '' }}">
             <ion-icon name="bookmarks"></ion-icon>
             Layanan
         </a>
@@ -26,13 +32,13 @@
             Ulasan
         </a>
     </div>
-    <div class="acc d-flex position-relative">
+    <div class="acc d-flex position-relative w-100">
         <div class="role d-flex flex-column w-100 align-items-center position-absolute bottom-0 start-0">
             <div class="position-absolute top-0 start-50 translate-middle">
                 <img src="/img/Vector.png" alt="logo">            
             </div>
-            <h3> Admin Mas Eka </h3>
-            <p>Tukang Sambel</p>     
+            Admin Mas Eka
+            Tukang Sambel    
         </div>
     </div>
 </div>
