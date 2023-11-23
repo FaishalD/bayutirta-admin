@@ -1,0 +1,9 @@
+{
+    return Validator::make($data [
+        "id_user": 1,
+        "email": "ridho67@gmail.com",
+        "password": "1234567",
+        "name": "Ridho",
+        "role": "Administrator"
+    ]
+}

@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pages;
+use App\Http\Controllers\loginController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,11 +16,15 @@ use App\Http\Controllers\pages;
 */
 
 Route::get('/', function () {
-    return view('main');
+    return view('loginPage');
 });
 
 Route::get('/dashboard', [pages::class, 'dashboard']);
 Route::get('/layanan', [pages::class,'layanan']);
+
+Route::get('/', [loginController::class, 'login']);
+Route::post('/', [loginController::class, 'auth']);
+
 
 // Route::get('/layanan', function () {
 //     return view('layanan.layanan');
