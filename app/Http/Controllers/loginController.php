@@ -30,7 +30,6 @@ class loginController extends Controller
 
         foreach ($users as $user) {
             if ($user['email'] === $credentials['email'] && password_verify($credentials['password'], $user['password'])) {
-                 // Autentikasi berhasil, diset dummy user ID 1
                 return redirect()->intended('/dashboard');
             }
         }

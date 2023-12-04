@@ -1,6 +1,6 @@
 <div class="side">
     <div class="logo d-flex w-100 align-items-center gap-3">
-        <img src="/img/Vector.png" alt="Logo" />
+        <img class= "logo-1"src="/img/Vector.png" alt="Logo" />
         Bayu Tirta 
     </div>
     <div class="divider w-100"></div>
@@ -23,11 +23,12 @@
             <ion-icon name="calendar-number"></ion-icon>
             Reservasi
         </a>
-        <a href="artikel" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
+        <a href="/artikel" class="menu-col d-flex w-100 align-items-center gap-3 p-3
+            {{ Request::is('artikel') ? 'active' : '' }}">
             <ion-icon name="document-text"></ion-icon>
             Artikel
         </a>
-        <a href="ulasan" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
+        <a href="/ulasan" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
             <ion-icon name="ticket"></ion-icon>
             Ulasan
         </a>
@@ -35,7 +36,7 @@
     <div class="acc d-flex position-relative w-100">
         <div class="role d-flex flex-column w-100 align-items-center position-absolute bottom-0 start-0">
             <div class="position-absolute top-0 start-50 translate-middle">
-                <img src="/img/Vector.png" alt="logo">            
+                <img class="logo-2" src="/img/Vector.png" alt="logo">            
             </div>
             Admin Mas Eka
             Tukang Sambel    
