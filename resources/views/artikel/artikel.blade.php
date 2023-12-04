@@ -8,7 +8,6 @@
             <ion-icon name="add-circle" class="icon-1"></ion-icon>
             Tambah Artikel
         </a>
-        </button>
     </div>
     <div class="catSort">
         <button type="button" class="btn btn-primary btn-2">

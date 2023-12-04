@@ -16,12 +16,11 @@
                     <form method="POST" action="/" class="d-flex flex-column gap-3">
                         @csrf
                         <div class="d-flex flex-column gap-2">
-                            <label for="email" class="form-label fw-bold">Email</label>
+                            <label for="username" class="form-label fw-bold">Username</label>
                             <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Tulis email anda"
+                                id="username"
+                                name="username"
+                                placeholder="Tulis username anda"
                                 class="form-control p-1"
                                 required
                                 autofocus
@@ -30,7 +29,6 @@
                         <div class="d-flex flex-column gap-2">
                             <label for="password" class="form-label fw-bold">Kata sandi</label>
                             <input
-                                type="password"
                                 id="password"
                                 name="password"
                                 placeholder="Tulis kata sandi anda"
