@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\artikelController;
+use App\Http\Controllers\dashboardController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\loginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +17,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('main');
+    return view('loginPage');
 });
+
+Route::get('/dashboard', [dashboardController::class, 'dashboard']);
+Route::get('/layanan', [dashboardController::class,'layanan']);
+
+Route::get('/artikel', [artikelController::class, 'artikel']);
+Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
+
+Route::get('/', [loginController::class, 'login']);
+Route::post('/', [loginController::class, 'auth']);
+
+
+// Route::get('/layanan', function () {
+//     return view('layanan.layanan');
+// });

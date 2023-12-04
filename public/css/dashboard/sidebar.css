@@ -1,14 +1,17 @@
 * {
-    font-family: 'Inter', sans-serif;;
+    font-family: "Inter", sans-serif;
 }
 
 .side {
+    position: fixed;
     display: flex;
-    width: 360px;
+    width: 244px;
+    height: 100vh;
     padding: 32px 24px 24px 24px;
     flex-direction: column;
     gap: 24px;
-    flex-shrink: 0;
+    background-color: white;
+    /* visibility: hidden; */
     /* background-color: bisque; */
 }
 .logo {
@@ -17,37 +20,50 @@
 }
 
 .divider {
-    width: 312px;
     height: 1px;
-    background: #D8DCDF;
+    background: #d8dcdf;
 }
 
 .menu {
     display: flex;
-    height: 619px;
+    height: 523px;
     flex-direction: column;
-    font-size: 18px;       
+    font-size: 18px;
 }
 
 .menu-col {
-    color: #A6AFCA;
+    color: #a6afca;
     border-radius: 5px;
     text-decoration: none;
 }
 
 .menu-col:hover {
-    color: #4F46E5;
-    background-color: #EFECFF;
+    color: #4f46e5;
+    background-color: #efecff;
+}
+
+.active {
+    color: #4f46e5;
+    background-color: #efecff;
 }
 
 .acc {
-    width: 312px;
-    height: 182px;
+    height: 127px;
 }
 
 .role {
-    padding: 53px 42px 24px 41px;
+    padding: 30px 40px 20px 40px;
     border-radius: 24px;
-    background: linear-gradient(135deg, #868CFF 0%, #4318FF 100%);;
+    background: linear-gradient(135deg, #868cff 0%, #4318ff 100%);
     color: white;
+}
+
+.logo-1 {
+    width: 50px;
+    height: 50px;
+}
+
+.logo-2 {
+    width: 50px;
+    height: 50px;
 }
