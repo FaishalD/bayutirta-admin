@@ -13,8 +13,10 @@ use App\Models\Login;
 
 class LoginController extends Controller
 {
-    public function dashboard() {
-        return view('dashboard');
+
+    public function login() {
+        return view('login.login');
+      
     }
 
     public function error() {
@@ -36,8 +38,10 @@ class LoginController extends Controller
             // Session::flash('id', $posts[0]->id); 
             // Session::flash('name', $posts[0]->name); 
             $request->session()->regenerate();
+            
             // echo $request->session();
-            return redirect()->intended('/api/dashboard');
+            return redirect()->intended('/dashboard');
+
             // if (isset($input['remember'])) {
             // setcookie('id', $result['id'], time()+3600);
             // 
@@ -50,15 +54,22 @@ class LoginController extends Controller
         // return response()->$pos; // Return the data as JSON
     }
     
-    public function logout(Request $request): RedirectResponse
+
+    public function logout() 
 {
+    // Auth::logout();
+ 
+    // $request->session()->invalidate();
+ 
+    // $request->session()->regenerateToken();
+
     Auth::logout();
+
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
  
-    $request->session()->invalidate();
- 
-    $request->session()->regenerateToken();
- 
-    return redirect('/api/getLayanan');
+    return redirect('/');
+
 }
 
     public function addUser(Request $request)
