@@ -13,8 +13,10 @@ use App\Models\Login;
 
 class LoginController extends Controller
 {
+
     public function login() {
         return view('login.login');
+      
     }
 
     public function error() {
@@ -36,10 +38,10 @@ class LoginController extends Controller
             // Session::flash('id', $posts[0]->id); 
             // Session::flash('name', $posts[0]->name); 
             $request->session()->regenerate();
-
             
             // echo $request->session();
             return redirect()->intended('/dashboard');
+
             // if (isset($input['remember'])) {
             // setcookie('id', $result['id'], time()+3600);
             // 
@@ -52,6 +54,7 @@ class LoginController extends Controller
         // return response()->$pos; // Return the data as JSON
     }
     
+
     public function logout() 
 {
     // Auth::logout();
@@ -66,6 +69,7 @@ class LoginController extends Controller
     request()->session()->regenerateToken();
  
     return redirect('/');
+
 }
 
     public function addUser(Request $request)

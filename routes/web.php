@@ -20,7 +20,9 @@ Route::get('/', function () {
     return view('loginPage');
 });
 
+
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth');
+
 Route::get('/layanan', [dashboardController::class,'layanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel']);
@@ -29,8 +31,6 @@ Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
 Route::get('/', [LoginController::class, 'login']);
 Route::post('/', [LoginController::class, 'getLogin']);
 Route::post('/logout', [LoginController::class, 'logout']);
-
-
 
 
 // Route::get('/layanan', function () {

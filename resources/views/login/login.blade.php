@@ -16,6 +16,7 @@
                     <form method="POST" action="/" class="d-flex flex-column gap-3">
                         @csrf
                         <div class="d-flex flex-column gap-2">
+
                             <label for="username" class="form-label fw-bold">Username</label>
                             <input
                                 id="username"

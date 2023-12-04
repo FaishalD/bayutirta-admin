@@ -33,11 +33,13 @@
             Ulasan
         </a>
     </div>
+
     <div class="logout">
         <a href="/" class="btn btn-danger" role="button">
             LogOut
         </a>
     </div>
+    
     <div class="acc d-flex position-relative w-100">
         <div class="role d-flex flex-column w-100 align-items-center position-absolute bottom-0 start-0">
             <div class="position-absolute top-0 start-50 translate-middle">
@@ -45,6 +47,7 @@
             </div>
             <h5> {{ auth()->user()->name }} </h5>
             <p> {{ auth()->user()->role }} </p>       
+
         </div>
     </div>
 </div>
