@@ -16,7 +16,7 @@ use App\Http\Controllers\LayananController;
 |
 */
 
-Route::get('/dashboard', [LoginController::class, 'dashboard'])->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'dashboard'])->middleware('auth');
 Route::get('/error', [LoginController::class, 'error']);
 
 Route::get('/getReservasi', [ReservasiController::class, 'getReservasi']);

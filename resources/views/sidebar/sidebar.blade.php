@@ -35,7 +35,7 @@
     </div>
 
     <div class="logout">
-        <a href="/" class="btn btn-danger" role="button">
+        <a href="logout" class="btn btn-danger" role="button">
             LogOut
         </a>
     </div>
