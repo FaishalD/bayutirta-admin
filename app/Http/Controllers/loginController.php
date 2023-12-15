@@ -53,22 +53,20 @@ class LoginController extends Controller
         }
         // return response()->$pos; // Return the data as JSON
     }
-    
 
-    public function logout() 
-{
-    // Auth::logout();
- 
-    // $request->session()->invalidate();
- 
-    // $request->session()->regenerateToken();
-
+    public function logout(Request $request) {
     Auth::logout();
-
-    request()->session()->invalidate();
-    request()->session()->regenerateToken();
  
-    return redirect('/');
+    $request->session()->invalidate();
+ 
+    $request->session()->regenerateToken();
+
+    // Auth::logout();
+
+    // request()->session()->invalidate();
+    // request()->session()->regenerateToken();
+ 
+    return redirect('/dashboard');
 
 }
 

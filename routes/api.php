@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\artikelController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,7 +17,7 @@ use App\Http\Controllers\LayananController;
 |
 */
 
-Route::get('/dashboard', [LoginController::class, 'dashboard'])->middleware('auth');
+// Route::get('/dashboard', [LoginController::class, 'dashboard'])->middleware('auth');
 Route::get('/error', [LoginController::class, 'error']);
 
 Route::get('/getReservasi', [ReservasiController::class, 'getReservasi']);
@@ -26,6 +27,8 @@ Route::post('/addReservasi', [ReservasiController::class, 'addReservasi']);
 Route::get('/getLayanan', [LayananController::class, 'getLayanan']);
 
 Route::post('/addLayanan', [LayananController::class, 'addLayanan']);
+
+Route::post('/addArtikel', [artikelController::class, 'addArtikel']);
 
 Route::post('/login', [LoginController::class, 'getLogin']);
 

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
+use App\Models\Layanan;
+
 class dashboardController extends Controller
 {
     //
@@ -12,6 +14,9 @@ class dashboardController extends Controller
         return view("pages.dashboard");
     }
     public function layanan() {
-        return view("pages.layanan");
+        $layanans = Layanan::all();
+        return view("pages.layanan",[
+            'layanan' => $layanans
+        ]);
     }
 }

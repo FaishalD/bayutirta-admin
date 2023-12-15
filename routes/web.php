@@ -21,16 +21,16 @@ Route::get('/', function () {
 });
 
 
-Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth');
+Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
 Route::get('/layanan', [dashboardController::class,'layanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel']);
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
 
-Route::get('/', [LoginController::class, 'login']);
+Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);
-Route::post('/logout', [LoginController::class, 'logout']);
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 // Route::get('/layanan', function () {
