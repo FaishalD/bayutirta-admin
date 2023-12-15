@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\artikelController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -26,6 +27,8 @@ Route::post('/addReservasi', [ReservasiController::class, 'addReservasi']);
 Route::get('/getLayanan', [LayananController::class, 'getLayanan']);
 
 Route::post('/addLayanan', [LayananController::class, 'addLayanan']);
+
+Route::post('/addArtikel', [artikelController::class, 'addArtikel']);
 
 Route::post('/login', [LoginController::class, 'getLogin']);
 

@@ -11,7 +11,10 @@ use App\Models\Artikel;
 class artikelController extends Controller
 {
     public function artikel() {
-        return view ('artikel.artikel');
+        $artikels = Artikel::all();
+        return view ('artikel.artikel',[
+            'artikel'=>$artikels
+        ]);
     }
     public function editArtikel() {
         return view ('artikel.editArtikel');

@@ -20,14 +20,25 @@
         </button>
     </div>
     <div class="katalog">
-        <div class="picture">
-            <img src="/img/ALT 4.png" alt="noservice">
-        </div>
-        <div class="message text-center">
-            <h3 class="fw-bold">Belum ada layanan yang dibuat</h3>
-            <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
-            <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
-        </div>
+        @if (isset($layanan))
+            @foreach ($layanan as $item)
+                <div >
+                    <h1>{{$item->nama_layanan}}</h1>
+                    <p>{{$item->harga}}</p>
+                    <p>{{$item->status}}</p>
+                    <p>{{$item->keterangan}}</p>
+                </div>
+            @endforeach
+        @else
+            <div class="picture">
+                <img src="/img/ALT 4.png" alt="noservice">
+            </div>
+            <div class="message text-center">
+                <h3 class="fw-bold">Belum ada layanan yang dibuat</h3>
+                <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
+                <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
+            </div>
+        @endif
     </div>
 </div>
 
