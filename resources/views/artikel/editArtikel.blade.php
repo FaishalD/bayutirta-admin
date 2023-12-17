@@ -51,6 +51,13 @@
                         id="exampleFormControlTextarea1"
                         rows="3"></textarea>
                 </div>
+                <div class="buttonGroup">
+                    <a href="/artikel" class="btn btn btn-outline-danger" role="button">
+                        Batal
+                    </a>
+                    <button type="button" class="btn btn-outline-success">Simpan</button>
+
+                </div>
             </div>
         </div>
     </div>

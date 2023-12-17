@@ -32,11 +32,7 @@
             </a>
         </div>
     
-        <div class="logout">
-            <a href="logout" class="btn btn-danger" role="button">
-                LogOut
-            </a>
-        </div>
+        
     
         <div class="acc d-flex position-relative w-100">
             <div class="role d-flex flex-column w-100 align-items-center position-absolute bottom-0 start-0">

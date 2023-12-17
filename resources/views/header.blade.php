@@ -9,6 +9,10 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-
+        <div class="logout">
+            <a href="logout" class="btn btn-danger" role="button">
+                LogOut
+            </a>
+        </div>
     </ul>
 </nav>
