@@ -13,10 +13,5 @@ class dashboardController extends Controller
     {
         return view("pages.dashboard");
     }
-    public function layanan() {
-        $layanans = Layanan::all();
-        return view("pages.layanan",[
-            'layanan' => $layanans
-        ]);
-    }
+    
 }

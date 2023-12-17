@@ -1,5 +1,5 @@
 @extends('main')
-@section('editArtikel')
+@section('content')
 <div class="editArtikel">
     <div class="title">Untitled Layanan</div>
         <div class="info-container">

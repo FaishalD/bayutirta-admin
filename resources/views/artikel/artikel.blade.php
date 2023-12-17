@@ -1,5 +1,5 @@
 @extends('main')
-@section('artikel')
+@section('content')
 
 <div class="artikel">
     <div class="titleWarp">
@@ -19,25 +19,23 @@
             Sort by
         </button>
     </div>
-    <div class="katalog">
+    <div class="card-list">
         @if (isset($artikel))
-            @foreach ($artikel as $item)           
-                <div class="row row-cols-1 row-cols-md-3 g-4 katalog-1">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="..." class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$item->judul}}</h5>
-                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
-                                        content. This content is a little bit longer.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
-                            </div>
-                        </div>
-                    </div>
+            @foreach ($artikel as $item)
+            <div class="card" style="width: 18rem;">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{$item->judul}}</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+                                
                     <!-- <p>{{$item->nama_penulis}}</p>
                     <p>{{$item->title_penulis}}</p>
                     <p>{{$item->isi}}</p> -->
-                </div>
+
             @endforeach
         @else
             <div class="picture">

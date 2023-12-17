@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\dashboardController;
+use App\Http\Controllers\LayananController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 
@@ -23,7 +24,8 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 
-Route::get('/layanan', [dashboardController::class,'layanan']);
+Route::get('/layanan', [LayananController::class,'layanan']);
+Route::get('/layanan/edit', [LayananController::class, 'editLayanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel']);
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);

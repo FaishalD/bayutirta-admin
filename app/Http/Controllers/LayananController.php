@@ -10,6 +10,17 @@ use App\Models\Layanan;
 
 class LayananController extends Controller
 {
+    public function editLayanan()
+    {
+        return view("pages.editLayanan");
+    }
+    public function layanan()
+    {
+        $layanans = Layanan::all();
+        return view("pages.layanan", [
+            'layanan' => $layanans
+        ]);
+    }
     public function getLayanan()
     {
         $posts = Layanan::all(); // Retrieve all posts from the database
