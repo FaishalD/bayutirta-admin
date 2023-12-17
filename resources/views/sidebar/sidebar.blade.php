@@ -45,7 +45,7 @@
             <div class="position-absolute top-0 start-50 translate-middle">
                 <img class="logo-2" src="/img/Vector.png" alt="logo">            
             </div>
-            <h5> {{ auth()->user()->name }} </h5>
+            <h6> {{ auth()->user()->name }} </h6>
             <p> {{ auth()->user()->role }} </p>       
 
         </div>

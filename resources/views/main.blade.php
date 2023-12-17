@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="{{ asset ('app.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/dashboard/sidebar.css') }}">
     <link rel="stylesheet" href="{{ asset ('css/artikel/artikel.css') }}">
@@ -13,6 +14,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter%3A400%2C500%2C600%2C700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Display%3A700" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=DM+Sans%3A500%2C700" />
+    <link rel="stylesheet" href="./styles/artikel-informasi-artikel-gRB.css" />
     <style>
         .base {
             background: #F4F7FE;
