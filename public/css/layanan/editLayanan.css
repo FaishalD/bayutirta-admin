@@ -1,0 +1,25 @@
+.section  {
+    margin-left: 320px;
+    padding-top: 24px;
+    
+}
+.pengaturan {
+    padding: 24px 32px;
+    flex-direction: column;
+    gap: 40px;
+    margin-right: 8px;
+    margin-bottom: 40px;
+    display: flex;
+    padding: 24px;
+    
+
+    border-radius: 8px;
+    background: #FFF;
+}
+
+.editLayanan {
+    margin-left: 8px;
+    margin-right: 32px;
+    padding-top: 24px;
+    /* background-color: aqua; */
+}

@@ -35,7 +35,7 @@
   border-color: #D8DCDF!important;
 }
 
-.katalog {
+/* .katalog {
   display: flex;
   padding: 40px 32px;
   flex-direction: column;
@@ -49,6 +49,21 @@
   background: #FFF;
 }
 
+.katalog-1 {
+  height: 300px!important;
+} */
 p {
   margin-bottom: 0px!important;
+}
+
+.card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    max-width: 1250px;
+    margin-right: 32px;
+    margin-bottom: 40px;
+    padding: 40px 32px;
+    gap: 24px;
+    border-radius: 12px;
+    background: #FFF;
 }
