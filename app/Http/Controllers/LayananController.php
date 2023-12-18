@@ -39,4 +39,23 @@ class LayananController extends Controller
 
         return response()->json($post); // Return the new post as JSON
     }
+
+    public function updateLayanan(Request $request, Layanan $layanan) {
+        $validatedData = $request->validate([
+            'nama_layanan' => 'required|max:255',
+            'harga' => 'required',
+            'keterangan' => 'required'
+        ]);
+
+        Course::where($request->id, $course->id)
+            ->update([
+                'nama_layanan'=> $request->nama_layanan,
+                'harga'=> $request->harga,
+                'status'=> $request->status,
+                'keterangan'=> $request->keterangan,
+                'update_at' => now(),
+            ]);
+
+        return response()->json($posts);
+    }
 }
