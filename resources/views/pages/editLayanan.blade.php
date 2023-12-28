@@ -1,17 +1,20 @@
 @extends('main')
 @section('content')
 <div class="section">
+    <div class="titleWarp">
+        <div class="layananTitle">Layanan Service LCD Handphone</div>
+    </div>
     <div class="col d-flex">
         <div class="pengaturan">
             <div class="row gap-4">
                 <div class="basic">
                     <h5>Pengaturan Dasar</h5>
                     <div class="list-group">
-                        <a href="/layanan/edit" class="list-group-item list-group-item-action active
+                        <a href="" class="list-group-item list-group-item-action active
                         {{ Request::is('/layanan/edit') ? 'active' : '' }}" aria-current="true">
                             Informasi Umum
                         </a>
-                        <a href="/layanan/edit" class="list-group-item list-group-item-action
+                        <a href="" class="list-group-item list-group-item-action
                         {{ Request::is('/layanan/edit') ? 'active' : '' }}">
                             Deskripsi Layanan
                         </a>
