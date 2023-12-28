@@ -32,7 +32,6 @@
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-            
                     <!-- <p>{{$item->nama_penulis}}</p>
                     <p>{{$item->title_penulis}}</p>
                     <p>{{$item->isi}}</p> -->
