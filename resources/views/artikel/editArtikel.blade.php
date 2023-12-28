@@ -4,8 +4,9 @@
     <div class="title">Untitled Artikel</div>
         <div class="info-container">
             <div class="info">
-                <form action="artikel.add" method="POST">
-                <h4>Detail Informasi Artikel</h4>
+                <form action="addArtikel" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <h4>Detail Informasi Artikel</h4>
                 <div className="row align-items-center">
                     <label for="formFile" class="form-label">
                         Upload Thumbnail Artikel
