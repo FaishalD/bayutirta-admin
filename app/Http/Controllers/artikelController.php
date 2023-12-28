@@ -32,7 +32,8 @@ class artikelController extends Controller
             'judul' => 'required|max:255',
             'nama_penulis' => 'required',
             'title_penulis' => 'required',
-            'isi' => 'required'
+            'isi' => 'required',
+            'foto' => 'foto'
         ]);
 
         // Create a new Post instance with the validated data
@@ -41,6 +42,7 @@ class artikelController extends Controller
             'nama_penulis' => $validatedData['nama_penulis'],
             'title_penulis' => $validatedData['title_penulis'],
             'isi' => $validatedData['isi'],
+            'foto' => $validatedData['foto'],
             'created_at' => now()
         ]);
 

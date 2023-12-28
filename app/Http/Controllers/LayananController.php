@@ -43,6 +43,7 @@ class LayananController extends Controller
             'harga' => $validatedData['harga'],
             'status' => 1,
             'keterangan' => $validatedData['keterangan'],
+            'foto' => $request['foto'],
             'created_at' => now()
         ]);
 

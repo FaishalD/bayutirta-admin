@@ -12,6 +12,7 @@ class Artikel extends Model
         'nama_penulis',
         'title_penulis',
         'isi',
+        'foto',
         'created_at',
         'updated_at'
     ];

@@ -29,6 +29,7 @@ Route::get('/layanan/edit', [LayananController::class, 'editLayanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel']);
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
+Route::post('/artikel/tambah', [artikelController::class, 'addArtikel'])->name('addArtikel');
 
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);
