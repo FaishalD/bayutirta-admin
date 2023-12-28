@@ -20,7 +20,7 @@
         </button>
     </div>
     <div class="card-list">
-        @if (isset($artikel))
+        @if (isset($artikel)AND $artikel->count()>0)
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
                 <img src="..." class="card-img-top" alt="...">
