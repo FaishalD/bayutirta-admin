@@ -34,7 +34,7 @@ class ReservasiController extends Controller
             'alamat' => $validatedData['alamat'],
             'merk_hp' => $validatedData['merk_hp'],
             'keterangan' => $request['keterangan'],
-            'status' => "pending",
+            'status' => "Belum Dikonfirmasi",
             'created_at' => now()
         ]);
 
