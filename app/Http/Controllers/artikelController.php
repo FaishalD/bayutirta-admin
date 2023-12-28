@@ -28,6 +28,13 @@ class artikelController extends Controller
     }
     public function addArtikel(Request $request)
     {
+        if($request->file('foto')){
+            $file= $request->file('foto');
+            $filename= date('YmdHi').$file->getClientOriginalName();
+            $file-> move(public_path('public/Image'), $filename);
+            $request['foto']= $filename;
+        }
+
         $validatedData = $request->validate([
             'judul' => 'required|max:255',
             'nama_penulis' => 'required',
@@ -48,6 +55,6 @@ class artikelController extends Controller
 
         $post->save(); // Save the new post to the database
 
-        return response()->json($post); // Return the new post as JSON
+        return redirect('artikel'); // Return the new post as JSON
     }
 }

@@ -20,7 +20,7 @@
         </button>
     </div>
     <div class="katalog">
-        @if (isset($layanan))
+        @if (isset($layanan) AND $layanan->count()>0)
         @foreach ($layanan as $item)
         <div>
             <h1>{{$item->nama_layanan}}</h1>

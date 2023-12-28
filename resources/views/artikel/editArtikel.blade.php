@@ -4,7 +4,7 @@
     <div class="title">Untitled Artikel</div>
         <div class="info-container">
             <div class="info">
-                <form action="addArtikel" method="post">
+                <form action="/artikel/addArtikel" method="POST">
                 <h4>Detail Informasi Artikel</h4>
                 <div className="row align-items-center">
                     <label for="formFile" class="form-label">
@@ -57,7 +57,7 @@
                     <a href="/artikel" class="btn btn btn-outline-danger" role="button">
                         Batal
                     </a>
-                    <button type="button" class="btn btn-outline-success">
+                    <button type="submit" class="btn btn-outline-success">
                         Simpan</button>
                 </div>
             </form>
