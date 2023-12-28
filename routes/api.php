@@ -28,7 +28,7 @@ Route::get('/getLayanan', [LayananController::class, 'getLayanan']);
 
 Route::post('/addLayanan', [LayananController::class, 'addLayanan']);
 
-Route::post('/addArtikel', [artikelController::class, 'addArtikel']);
+Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel']);
 
 Route::post('/login', [LoginController::class, 'getLogin']);
 

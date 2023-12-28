@@ -27,8 +27,9 @@ Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware(
 Route::get('/layanan', [LayananController::class,'layanan']);
 Route::get('/layanan/edit', [LayananController::class, 'editLayanan']);
 
-Route::get('/artikel', [artikelController::class, 'artikel']);
+Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
+Route::post('/artikel/tambah', [artikelController::class, 'addArtikel'])->name('artikel.add');
 
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);
