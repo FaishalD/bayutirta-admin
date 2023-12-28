@@ -23,15 +23,15 @@
         @if (isset($artikel)AND $artikel->count()>0)
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
+                @if ($item->foto)
+                    <img src="{{ url('public/Image/'.$item->foto) }}"style="height: auto; width: auto;">
+                @endif
                 <div class="card-body">
                     <h5 class="card-title">{{$item->judul}}</h5>
-                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                        content.</p>
+                    <p class="card-text">{{$item->isi}}</p>
                     <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
             </div>
-                                
                     <!-- <p>{{$item->nama_penulis}}</p>
                     <p>{{$item->title_penulis}}</p>
                     <p>{{$item->isi}}</p> -->
