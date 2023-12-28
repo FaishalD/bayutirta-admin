@@ -16,7 +16,7 @@ class dashboardController extends Controller
         // $ditolak = Reservasi::where('status','=','pending')->count();
         $diterima = Reservasi::where('status','=','Diterima')->count();
         $total = Reservasi::all()->count();
-        $reservasi = Reservasi::orderBy('created_at', 'ASC')->get();
+        $reservasi = Reservasi::orderBy('created_at', 'DESC')->get();
         
         return view("pages.dashboard",[
             'belum_dikonfirmasi'=>$belum_dikonfirmasi,
