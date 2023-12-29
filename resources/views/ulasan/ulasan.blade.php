@@ -6,23 +6,36 @@
     </div>
     <div class="card-list-ulasan">
         <h5>Ulasan Google Maps</h5>
+        @if (isset($ulasan) AND $ulasan->count()>0)
+        @foreach ($ulasan as $item)
         <div class="card">
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-auto">
-                        <h5>This is some text within a card body.</h5>
+                        <h5>{{$item->author_name}}</h5>
                     </div>
                     <div class="col-md-3 ms-auto reserve">
                         <span class="badge text-bg-warning" >
                             <ion-icon name="star"></ion-icon>
-                            5
+                            {{$item->rating}}
                         </span>
                     </div>             
                 </div>
-                <p>halo</p>
-                <p>halo<p>
+                <p>{{$item->created_at->format('d-m-Y')}}</p>
+                <p>{{$item->text}}<p>
             </div>
         </div>
+        @endforeach
+        @else
+        <div class="picture">
+            <img src="/img/ALT 4.png" alt="noservice">
+        </div>
+        <div class="message text-center">
+            <h3 class="fw-bold">Belum ada Ulasan yang dibuat</h3>
+            <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
+            <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
+        </div>
+        @endif
     </div>
 </div>
 @endsection
