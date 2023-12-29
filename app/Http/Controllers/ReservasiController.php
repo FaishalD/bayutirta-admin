@@ -10,9 +10,9 @@ use App\Models\Reservasi;
 
 class ReservasiController extends Controller
 {
-    public function reservasi()
-    {
+    public function reservasi() {
         return view('reservasi.reservasi');
+      
     }
     public function getReservasi()
     {
@@ -38,7 +38,7 @@ class ReservasiController extends Controller
             'alamat' => $validatedData['alamat'],
             'merk_hp' => $validatedData['merk_hp'],
             'keterangan' => $request['keterangan'],
-            'status' => "pending",
+            'status' => "Belum Dikonfirmasi",
             'created_at' => now()
         ]);
 

@@ -25,6 +25,7 @@ Route::get('/', function () {
 
 
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
+Route::get('/reservasi', [ReservasiController::class,'reservasi']);
 
 Route::get('/reservasi', [ReservasiController::class, 'reservasi']);
 
@@ -35,7 +36,7 @@ Route::get('/layanan/edit', [LayananController::class, 'editLayanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
-Route::post('/artikel/tambah', [artikelController::class, 'addArtikel'])->name('artikel.add');
+Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->name('addArtikel');
 
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);
