@@ -152,12 +152,6 @@
                   <div class="content-customer">
                     <div class="actions">
                       <h5 class="font-jakarta">Pelanggan Terbaru</h5>
-                      <p><a href="">Lihat Semua <svg width="10" height="11" viewBox="0 0 10 11" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path d="M5.26172 3.28867L7.47304 5.49998L5.26172 7.7113" stroke="#4F46E5"
-                              stroke-width="1.03386" stroke-linecap="round" stroke-linejoin="round" />
-                          </svg>
-                        </a></p>
                     </div>
                     <div class="profile">
                       @if (isset($reservasi) AND $total>0)
@@ -217,7 +211,7 @@
             <div class="content-order">
               <div class="action">
                 <h5 class="font-jakarta">Tasks / Pesanan Baru</h5>
-                <p class="font-jakarta"><a href="">Lihat Semua
+                <p class="font-jakarta"><a href="/reservasi">Lihat Semua
                   </a><svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.09961 2.03342L6.66628 4.60008L4.09961 7.16675" stroke="#4F46E5" stroke-width="1.2"
                       stroke-linecap="round" stroke-linejoin="round" />
@@ -296,7 +290,51 @@
                     <p>Status Layanan</p>
                     <h5>Belum Dikonfirmasi</h5>
                   </div>
-                  <a href="" class="confirm">Beri Konfirmasi</a>
+                  <button type="button" class="btn confirm" data-bs-toggle="modal" data-bs-target="#exampleModal">Beri Konfirmasi</button>
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h1 class="modal-title fs-5" id="exampleModalLabel">Reservasi Layanan</h1>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                          <div class="modal-body">
+                            <div class="container-fluid">
+                              <div class="row">
+                                <div class="col-md-4">.col-md-4</div>
+                                <div class="col-md-4 ms-auto">.col-md-4 .ms-auto</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-3 ms-auto">.col-md-3 .ms-auto</div>
+                                <div class="col-md-2 ms-auto">.col-md-2 .ms-auto</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-6 ms-auto">.col-md-6 .ms-auto</div>
+                              </div>
+                              <div class="row">
+                                <div class="col-sm-9">
+                                  Level 1: .col-sm-9
+                                  <div class="row">
+                                    <div class="col-8 col-sm-6">
+                                      Level 2: .col-8 .col-sm-6
+                                    </div>
+                                    <div class="col-4 col-sm-6">
+                                      Level 2: .col-4 .col-sm-6
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-danger">Tolak</button>
+                          <button type="button" class="btn btn-primary">Terima</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
               </div>

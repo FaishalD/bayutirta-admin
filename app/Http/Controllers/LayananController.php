@@ -12,12 +12,12 @@ class LayananController extends Controller
 {
     public function editLayanan()
     {
-        return view("pages.editLayanan");
+        return view("layanan.editLayanan");
     }
     public function layanan()
     {
         $layanans = Layanan::all();
-        return view("pages.layanan", [
+        return view("layanan.layanan", [
             'layanan' => $layanans
         ]);
     }
