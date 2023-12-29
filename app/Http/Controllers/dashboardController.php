@@ -21,7 +21,7 @@ class dashboardController extends Controller
             $layanan = Layanan::where('id_layanan','=',$item->id_layanan)->first();
             $item['nama_layanan']=$layanan->nama_layanan;
         }
-        return view("pages.dashboard",[
+        return view("dashboard.dashboard",[
             'belum_dikonfirmasi'=>$belum_dikonfirmasi,
             'diterima'=>$diterima,
             'total'=>$total,
