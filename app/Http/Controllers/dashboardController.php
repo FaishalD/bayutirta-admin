@@ -16,9 +16,12 @@ class dashboardController extends Controller
         // $ditolak = Reservasi::where('status','=','pending')->count();
         $diterima = Reservasi::where('status','=','Diterima')->count();
         $total = Reservasi::all()->count();
-        $reservasi = Reservasi::orderBy('created_at', 'DESC')->get();
-        
-        return view("dashboard.dashboard",[
+        $reservasi = Reservasi::orderBy('created_at', 'DESC')->take(5)->get();
+        foreach ($reservasi as $item) {
+            $layanan = Layanan::where('id_layanan','=',$item->id_layanan)->first();
+            $item['nama_layanan']=$layanan->nama_layanan;
+        }
+        return view("pages.dashboard",[
             'belum_dikonfirmasi'=>$belum_dikonfirmasi,
             'diterima'=>$diterima,
             'total'=>$total,
