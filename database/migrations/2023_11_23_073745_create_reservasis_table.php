@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('reservasis', function (Blueprint $table) {
             $table->id('id_reservasi');
-            $table->foreignId('id_layanan')->constrained('layanans')->onUpdate('cascade')->onDelete('cascade');
+            $table->bigInteger('id_layanan');
             $table->string('name');
             $table->string('no_telp');
             $table->string('alamat');
