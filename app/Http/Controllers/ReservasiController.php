@@ -10,6 +10,10 @@ use App\Models\Reservasi;
 
 class ReservasiController extends Controller
 {
+    public function reservasi() {
+        return view('reservasi.reservasi');
+      
+    }
     public function getReservasi()
     {
         $posts = Reservasi::all(); // Retrieve all posts from the database
