@@ -26,6 +26,24 @@ class ReservasiController extends Controller
             'merk_hp' => 'required'
         ]);
 
+        if ($request->file('foto')) {
+            $file= $request->file('foto');
+            $filename= date('YmdHi').$file->getClientOriginalName()[0];
+            $file->storeAs('reservasi', $filename, 'public');
+
+            $post = new Reservasi([
+                'id_layanan' => $request['id_layanan'],
+                'name' => $validatedData['name'],
+                'no_telp' => $validatedData['no_telp'],
+                'alamat' => $validatedData['alamat'],
+                'merk_hp' => $validatedData['merk_hp'],
+                'keterangan' => $request['keterangan'],
+                'foto' => $filename,
+                'status' => "Belum Dikonfirmasi",
+                'created_at' => now()
+            ]);
+        }else{
+
         // Create a new Post instance with the validated data
         $post = new Reservasi([
             'id_layanan' => $request['id_layanan'],
@@ -37,6 +55,7 @@ class ReservasiController extends Controller
             'status' => "Belum Dikonfirmasi",
             'created_at' => now()
         ]);
+        }
 
         $post->save(); // Save the new post to the database
 
