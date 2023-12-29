@@ -18,7 +18,7 @@ class dashboardController extends Controller
         $total = Reservasi::all()->count();
         $reservasi = Reservasi::orderBy('created_at', 'DESC')->get();
         
-        return view("pages.dashboard",[
+        return view("dashboard.dashboard",[
             'belum_dikonfirmasi'=>$belum_dikonfirmasi,
             'diterima'=>$diterima,
             'total'=>$total,
