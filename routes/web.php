@@ -27,7 +27,6 @@ Route::get('/', function () {
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 Route::get('/reservasi', [ReservasiController::class,'reservasi']);
 
-Route::get('/reservasi', [ReservasiController::class, 'reservasi']);
 
 Route::get('/ulasan', [UlasanController::class, 'ulasan']);
 
