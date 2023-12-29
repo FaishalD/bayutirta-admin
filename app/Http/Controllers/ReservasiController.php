@@ -11,7 +11,10 @@ use App\Models\Reservasi;
 class ReservasiController extends Controller
 {
     public function reservasi() {
-        return view('reservasi.reservasi');
+        $reservasi = Reservasi::orderBy('created_at', 'DESC')->get();
+        return view('reservasi.reservasi',[
+            'reservasi'=>$reservasi
+        ]);
       
     }
     public function getReservasi()

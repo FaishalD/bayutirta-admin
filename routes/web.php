@@ -3,6 +3,7 @@
 use App\Http\Controllers\artikelController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\LayananController;
+use App\Http\Controllers\ReservasiController;
 use App\Http\Controllers\UlasanController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
