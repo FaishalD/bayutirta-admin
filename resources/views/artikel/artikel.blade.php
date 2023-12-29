@@ -27,15 +27,17 @@
                     <img src="{{ url('public/Image/'.$item->foto) }}"style="height: auto; width: auto;">
                 @endif
                 <div class="card-body">
-                    <h5 class="card-title">{{$item->judul}}</h5>
+                    <h4>{{$item->judul}}</h4>
                     <p class="card-text">{{$item->isi}}</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                        <small class="text-body-secondary">9 mins</small>
+                    </div>
                 </div>
             </div>
-                    <!-- <p>{{$item->nama_penulis}}</p>
-                    <p>{{$item->title_penulis}}</p>
-                    <p>{{$item->isi}}</p> -->
-
             @endforeach
         @else
             <div class="picture">
@@ -48,6 +50,21 @@
             </div>
         @endif
     </div>
+    <nav aria-label="...">
+        <ul class="pagination">
+            <li class="page-item disabled">
+                <a class="page-link">Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item" aria-current="page">
+                <a class="page-link" href="#">2</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
 </div>
 
 

@@ -17,7 +17,8 @@
                 <ion-icon name="bookmarks"></ion-icon>
                 Layanan
             </a>
-            <a href="/reservasi" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
+            <a href="/reservasi" class="menu-col d-flex w-100 align-items-center gap-3 p-3
+                {{ Request::is('reservasi') ? 'active' : '' }}">
                 <ion-icon name="calendar-number"></ion-icon>
                 Reservasi
             </a>
@@ -26,7 +27,8 @@
                 <ion-icon name="document-text"></ion-icon>
                 Artikel
             </a>
-            <a href="/ulasan" class="menu-col d-flex w-100 align-items-center gap-3 p-3">
+            <a href="/ulasan" class="menu-col d-flex w-100 align-items-center gap-3 p-3
+                {{ Request::is('ulasan') ? 'active' : '' }}">
                 <ion-icon name="ticket"></ion-icon>
                 Ulasan
             </a>
