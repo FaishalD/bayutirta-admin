@@ -28,12 +28,14 @@
                             />
                         </div>
                         <div class="d-flex flex-column gap-2">
-                            <label for="password" class="form-label fw-bold">Kata sandi</label>
+                            <label for="inputPassword5" class="form-label fw-bold">Kata Sandi</label>
                             <input
-                                id="password"
+                                type="password"
+                                id="inputPassword5"
                                 name="password"
                                 placeholder="Tulis kata sandi anda"
                                 class="form-control p-1"
+                                aria-describedby="passwordHelpBlock"
                                 required
                             />
                         </div>
