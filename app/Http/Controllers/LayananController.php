@@ -49,25 +49,50 @@ class LayananController extends Controller
 
     public function addLayanan(Request $request)
     {
+        // dd($request);
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
-            'harga' => 'required',
-            'keterangan' => 'required'
+            'harga_terendah' => 'required',
+            'harga_tertinggi' => 'required',
+            'keterangan' => 'required',
+            'merk_hp' => 'required',
         ]);
+
+        
+        if(isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])){
+            $file= $request->file('foto');
+            $filename= date('YmdHi').$file->getClientOriginalName()[0];
+            // Storage::disk('public')->url($filename);
+            // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
+            $file->storeAs('layanan', $filename, 'public');
+            // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
+            // $file-> move(public_path(), $filename);
+            // $request['foto']= $filename;
+        }else{
+            $filename = 'tidak ada';
+        }
+
+        if(isset($_POST['status'])){                       
+            $status = 1;
+        } else {
+            $status = 0;
+        }
 
         // Create a new Post instance with the validated data
         $post = new Layanan([
             'nama_layanan' => $validatedData['nama_layanan'],
-            'harga' => $validatedData['harga'],
-            'status' => 1,
+            'harga_terendah' => $validatedData['harga_terendah'],
+            'harga_tertinggi' => $validatedData['harga_tertinggi'],
+            'merk_hp' => $validatedData['merk_hp'],
+            'status' => $status,
             'keterangan' => $validatedData['keterangan'],
-            'foto' => $request['foto'],
+            'foto' => $filename,
             'created_at' => now()
         ]);
 
         $post->save(); // Save the new post to the database
-
-        return response()->json($post); // Return the new post as JSON
+        return redirect('/layanan');
+        // return response()->json($post); // Return the new post as JSON
     }
 
     public function updateLayanan(Request $request, Layanan $layanan) {

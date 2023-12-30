@@ -34,8 +34,7 @@ class artikelController extends Controller
             'title_penulis' => 'required',
             'isi' => 'required'
         ]);
-        
-        // if($request->file('foto')){
+        if($request->file('foto')->count()==1){
             $file= $request->file('foto');
             $filename= date('YmdHi').$file->getClientOriginalName()[0];
             // Storage::disk('public')->url($filename);
@@ -44,7 +43,7 @@ class artikelController extends Controller
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
             // $file-> move(public_path(), $filename);
             // $request['foto']= $filename;
-        // }
+        }
 
 
         // Create a new Post instance with the validated data
