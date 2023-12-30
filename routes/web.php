@@ -38,6 +38,7 @@ Route::get('/layanan/review', [LayananController::class, 'review']);
 Route::get('/layanan/qna', [LayananController::class, 'qna']);
 
 
+
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
 Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->name('addArtikel');
