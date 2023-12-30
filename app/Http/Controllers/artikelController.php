@@ -61,4 +61,11 @@ class artikelController extends Controller
 
         return redirect('artikel'); // Return the new post as JSON
     }
+
+    public function deleteArtikel(string $id)
+    {
+        Artikel::where('id_artikel', '=', $id)->delete();
+
+        return redirect('artikel');
+    }
 }

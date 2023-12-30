@@ -37,6 +37,7 @@ Route::get('/layanan/general', [LayananController::class, 'infolayanan']);
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
 Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->name('addArtikel');
+Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])->name('deleteArtikel');
 
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
 Route::post('/', [LoginController::class, 'getLogin']);

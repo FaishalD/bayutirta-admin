@@ -24,14 +24,14 @@
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
                 @if ($item->foto)
-                    <img src="{{ url('public/Image/'.$item->foto) }}"style="height: auto; width: auto;">
+                    <img src="{{ url('public/images/'.$item->foto) }}"style="height: auto; width: auto;">
                 @endif
                 <div class="card-body">
                     <h4>{{$item->judul}}</h4>
                     <p class="card-text">{{$item->isi}}</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
-                            <button type="button" class="btn btn-sm btn-danger">Delete</button>
+                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-danger">Delete</button></a>
                             <button type="button" class="btn btn-sm btn-success">Edit</button>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
