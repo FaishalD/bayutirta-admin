@@ -1,6 +1,11 @@
+.sidelayanan {
+    padding-top: 24px;
+    position:absolute;
+    width: 600px;
+}
+
 .pengaturan {
-    position: fixed;
-    display: flex;
+    margin-top: 80px;
     margin-left: 320px;
     padding-top: 24px;
     padding: 24px 32px;
