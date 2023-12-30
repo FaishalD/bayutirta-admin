@@ -31,6 +31,16 @@ class LayananController extends Controller
     {
         return view("layanan.additional");
     }
+
+    public function review()
+    {
+        return view("layanan.reviewLayanan");
+    }
+    public function qna()
+    {
+        return view("layanan.qna");
+    }
+
     public function getLayanan()
     {
         $posts = Layanan::all(); // Retrieve all posts from the database

@@ -34,6 +34,9 @@ Route::get('/layanan', [LayananController::class,'layanan']);
 Route::get('/layanan/info', [LayananController::class, 'infoLayanan']);
 Route::get('/layanan/deskripsi', [LayananController::class, 'descLayanan']);
 Route::get('/layanan/additional', [LayananController::class, 'additional']);
+Route::get('/layanan/review', [LayananController::class, 'review']);
+Route::get('/layanan/qna', [LayananController::class, 'qna']);
+
 
 
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
