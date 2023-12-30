@@ -3,8 +3,7 @@
 <div class="editArtikel">
     <div class="title">Untitled Artikel</div>
         <div class="info-container">
-            <div class="info">
-                <form action="addArtikel" method="POST" enctype="multipart/form-data">
+            <form class="info" action="addArtikel" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <h4>Detail Informasi Artikel</h4>
                 <div className="row align-items-center">
@@ -61,8 +60,7 @@
                     <button type="submit" class="btn btn-outline-success">
                         Simpan</button>
                 </div>
-            </form>
-            </div>
+            </form>                                          
         </div>
     </div>
 </div>

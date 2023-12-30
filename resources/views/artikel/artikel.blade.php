@@ -29,10 +29,10 @@
                 <div class="card-body">
                     <h4>{{$item->judul}}</h4>
                     <p class="card-text">{{$item->isi}}</p>
-                    <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
-                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-danger">Delete</button></a>
-                            <button type="button" class="btn btn-sm btn-success">Edit</button>
+                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                     </div>
