@@ -49,7 +49,9 @@ class LayananController extends Controller
 
     public function addLayanan(Request $request)
     {
+
         // dd($request);
+
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
             'harga_terendah' => 'required',

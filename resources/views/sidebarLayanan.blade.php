@@ -12,6 +12,7 @@
         <div class="additional">
             <h5>Pengaturan Tambahan</h5>
             <ul class="list-group">
+
                 <!-- <a href="/layanan/additional" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.additional') ? 'active' : '' }}">
                         <p>Additional Info</p>
@@ -25,6 +26,7 @@
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         </div> 
+
                 </a> -->
                  <a href="/layanan/qna" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.qna') ? 'active' : '' }}">
