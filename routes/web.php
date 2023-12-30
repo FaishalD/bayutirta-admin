@@ -31,7 +31,8 @@ Route::get('/reservasi', [ReservasiController::class,'reservasi']);
 Route::get('/ulasan', [UlasanController::class, 'ulasan']);
 
 Route::get('/layanan', [LayananController::class,'layanan']);
-Route::get('/layanan/edit', [LayananController::class, 'editLayanan']);
+Route::get('/layanan/deskripsi', [LayananController::class, 'editLayanan']);
+Route::get('/layanan/general', [LayananController::class, 'infolayanan']);
 
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
 Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);

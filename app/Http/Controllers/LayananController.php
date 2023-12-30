@@ -14,6 +14,12 @@ class LayananController extends Controller
     {
         return view("layanan.editLayanan");
     }
+
+    public function infolayanan()
+    {
+        return view("layanan.infolayanan");
+    }
+
     public function layanan()
     {
         $layanans = Layanan::all();

@@ -43,8 +43,7 @@ class artikelController extends Controller
             $file->storeAs('images', $filename, 'public');
             // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
             // $file-> move(public_path(), $filename);
-            $request['foto']= $filename;
-            echo $filename;
+            // $request['foto']= $filename;
         // }
 
 

@@ -1,0 +1,14 @@
+.pengaturan {
+    position: fixed;
+    display: flex;
+    margin-left: 320px;
+    padding-top: 24px;
+    padding: 24px 32px;
+    flex-direction: column;
+    gap: 40px;
+    padding: 24px;
+    
+
+    border-radius: 8px;
+    background: #FFF;
+}

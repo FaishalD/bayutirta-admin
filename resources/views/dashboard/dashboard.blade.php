@@ -218,6 +218,7 @@
                   </svg></p>
               </div>
               {{-- Mulai for loop --}}
+              {{-- @dd($reservasi) --}}
               @if (isset($reservasi) AND $total>0)
               @foreach ($reservasi as $item)
               <div class="service">
@@ -225,7 +226,7 @@
                   <div class="col-xl-12">
                     <div class="time">
                       <p>{{$item->created_at->format('d-m-Y H:i')}}</p>
-                      <h5>Layanan Service Layar Handphone Android Belum</h5>
+                      <h5>{{$item->nama_layanan}}</h5>
                     </div>
                   </div>
                 </div>
@@ -242,7 +243,6 @@
                   </div>
                   <a href="" class="confirm">Beri Konfirmasi</a>
                   @elseif ($item->status == "Diterima")
-                  <p>Status Layanan</p>
                   <h5 class="status-confirm">{{$item->status}}</h5>
                 </div>
                 <div class="button-detail">

@@ -4,7 +4,7 @@
 <div class="layanan">
     <div class="titleWarp">
         <div class="layananTitle">Layanan</div>
-        <a href="/layanan/edit" class="btn btn-primary btn-1" role="button">
+        <a href="/layanan/general" class="btn btn-primary btn-1" role="button">
             <ion-icon name="add-circle" class="icon-1"></ion-icon>
             Tambah Layanan
         </a>
