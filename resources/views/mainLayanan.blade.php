@@ -59,9 +59,9 @@
     <div class="bebas">
         @include('header')
         @include('sidebar')
-        <div class="sidelayanan">
+        {{-- <div class="sidelayanan">
             @include('sidebarLayanan')
-        </div>
+        </div> --}}
         
         @yield('content')
         
