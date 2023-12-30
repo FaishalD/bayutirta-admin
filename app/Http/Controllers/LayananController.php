@@ -10,16 +10,26 @@ use App\Models\Layanan;
 
 class LayananController extends Controller
 {
-    public function editLayanan()
+    public function descLayanan()
     {
-        return view("layanan.editLayanan");
+        return view("layanan.descLayanan");
     }
+
+    public function infoLayanan()
+    {
+        return view("layanan.infoLayanan");
+    }
+
     public function layanan()
     {
         $layanans = Layanan::all();
         return view("layanan.layanan", [
             'layanan' => $layanans
         ]);
+    }
+    public function additional()
+    {
+        return view("layanan.additional");
     }
     public function getLayanan()
     {
