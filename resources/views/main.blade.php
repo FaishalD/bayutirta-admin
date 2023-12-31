@@ -56,11 +56,16 @@
 </head>
 
 <body class="base hold-transition sidebar-mini layout-fixed">
+    <div class="preloader flex-column justify-content-center align-items-center">
+        <img class="animation__wobble" src="/img/Vector.png" alt="BayuLogo" height="60" width="60">
+    </div>
     <div class="bebas">
         @include('header')
         @include('sidebar')
         @yield('content')
     </div>
+
+    
 
     <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

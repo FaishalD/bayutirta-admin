@@ -3,7 +3,9 @@
   padding-top: 24px;
   /* background-color: aqua; */
 }
-
+.req{
+    color: red;
+}
 .title {
     font-size: 32px;
     font-weight: 700;

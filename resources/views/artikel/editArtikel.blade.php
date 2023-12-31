@@ -9,53 +9,57 @@
                 <h4>Detail Informasi Artikel</h4>
             <div className="row align-items-center">
                 <label for="formFile" class="form-label">
-                    Upload Thumbnail Artikel (Jika ingin diubah)
+                    Upload Thumbnail Artikel (Jika ingin diubah)<span class="req">*</span>
                 </label>
-                <input class="form1 form-control" type="file" name="foto" id="formFile">
+                <input class="form1 form-control" type="file" name="foto" id="formFile" required>
             </div>
             
             <div className="row align-items-center">
                 <label for="formFile" class="form-label">
-                    Judul Artikel
+                    Judul Artikel<span class="req">*</span>
                 </label>
                 <input
                     name="judul"
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Tulis Judul Artikel"
-                    value="{{$detail->judul}}">
+                    value="{{$detail->judul}}"
+                    required>
             </div>
             <div className="row align-items-center">
                 <label for="formFile" class="form-label">
-                    Nama Penulis
+                    Nama Penulis<span class="req">*</span>
                 </label>
                 <input
                     name="nama_penulis"
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Tulis Nama Penulis"
-                    value="{{$detail->nama_penulis}}">
+                    value="{{$detail->nama_penulis}}"
+                    required>
             </div>
             <div className="row align-items-center">
                 <label for="formFile" class="form-label">
-                    Title Penulis
+                    Title Penulis<span class="req">*</span>
                 </label>
                 <input
                     name="title_penulis"
                     class="form-control"
                     id="exampleFormControlInput1"
                     placeholder="Tulis Title Penulis"
-                    value="{{$detail->title_penulis}}">
+                    value="{{$detail->title_penulis}}"
+                    required>
             </div>
             <div class="row align-items-center">
                 <label for="exampleFormControlTextarea1" class="form-label">
-                    Isi Artikel
+                    Isi Artikel<span class="req">*</span>
                 </label>
                 <textarea
                     name="isi"
                     class="form-control"
                     id="exampleFormControlTextarea1"
-                    rows="3">{{$detail->isi}}</textarea>
+                    rows="3"
+                    required>{{$detail->isi}}</textarea>
             </div>
             <div class="buttonGroup">
                 <a href="/artikel" class="btn btn btn-outline-danger" role="button">
@@ -73,50 +77,55 @@
                     <h4>Detail Informasi Artikel</h4>
                 <div className="row align-items-center">
                     <label for="formFile" class="form-label">
-                        Upload Thumbnail Artikel
+                        Upload Thumbnail Artikel<span class="req">*</span>
                     </label>
-                    <input class="form1 form-control" type="file" name="foto" id="formFile">
+                    <input class="form1 form-control" type="file" name="foto" id="formFile" required>
                 </div>
                 
                 <div className="row align-items-center">
                     <label for="formFile" class="form-label">
-                        Judul Artikel
+                        Judul Artikel<span class="req">*</span>
                     </label>
                     <input
                         name="judul"
                         class="form-control"
                         id="exampleFormControlInput1"
-                        placeholder="Tulis Judul Artikel">
+                        placeholder="Tulis Judul Artikel"
+                        required>
                 </div>
                 <div className="row align-items-center">
                     <label for="formFile" class="form-label">
-                        Nama Penulis
+                        Nama Penulis<span class="req">*</span>
                     </label>
                     <input
                         name="nama_penulis"
                         class="form-control"
                         id="exampleFormControlInput1"
-                        placeholder="Tulis Nama Penulis">
+                        placeholder="Tulis Nama Penulis"
+                        required>
                 </div>
                 <div className="row align-items-center">
-                    <label for="formFile" class="form-label">
-                        Title Penulis
+                    <label for="validationTooltip03" class="form-label">
+                        Title Penulis<span class="req">*</span>
                     </label>
                     <input
+                        type="text"
                         name="title_penulis"
                         class="form-control"
-                        id="exampleFormControlInput1"
-                        placeholder="Tulis Title Penulis">
+                        placeholder="Tulis Title Penulis"
+                        id="validationTooltip03"
+                        required>
                 </div>
                 <div class="row align-items-center">
                     <label for="exampleFormControlTextarea1" class="form-label">
-                        Isi Artikel
+                        Isi Artikel<span class="req">*</span>
                     </label>
                     <textarea
                         name="isi"
                         class="form-control"
                         id="exampleFormControlTextarea1"
-                        rows="3"></textarea>
+                        rows="3"
+                        required></textarea>
                 </div>
                 <div class="buttonGroup">
                     <a href="/artikel" class="btn btn btn-outline-danger" role="button">

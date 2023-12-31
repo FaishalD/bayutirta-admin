@@ -18,24 +18,24 @@
                     <h4>Detail Informasi Layanan</h4>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Upload Thumbnail Layanan (Jika ingin diubah)
+                            Upload Thumbnail Layanan (Jika ingin diubah)<span class="req">*</span>
                         </label>
-                        <input class="form1 form-control" type="file" name="foto" id="formFile">
+                        <input class="form1 form-control" type="file" name="foto" id="formFile"required>
                     </div>
         
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Nama Layanan
+                            Nama Layanan<span class="req">*</span>
                         </label>
                         <input name="nama_layanan" value="{{$detail->nama_layanan}}" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Tulis Nama Layanan...">
+                            placeholder="Tulis Nama Layanan..."required>
                     </div>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Deskripsi Layanan
+                            Deskripsi Layanan<span class="req">*</span>
                         </label>
                         <div class="card-body">
-                            <textarea id="summernote" name="keterangan">
+                            <textarea id="summernote" name="keterangan"required>
                                 {{$detail->keterangan}}
                             </textarea>
                         </div>
@@ -43,11 +43,11 @@
                     <div class="divider w-100"></div>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Merk Handphone yang dilayani
+                            Merk Handphone yang dilayani<span class="req">*</span>
                         </label>
                         <div class="input-group mb-3">
                             <input name="merk_hp" value="{{$detail->merk_hp}}" type="text" class="form-control" placeholder="" aria-label="Recipient's username"
-                                aria-describedby="button-addon2">
+                                aria-describedby="button-addon2"required>
                             {{-- <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 Tambahkan Merk
@@ -87,20 +87,20 @@
                     <div class="divider w-100"></div>
                     <div class="row align-items-center">
                         <label for="exampleFormControlTextarea1" class="form-label">
-                            Range Harga
+                            Range Harga<span class="req">*</span>
                         </label>
                         <div class="d-flex">     
                             <div class="input-group mb-3">
                                 Harga Terendah
                                 <span class="input-group-text" id="basic-addon1">Rp</span>
                                 <input type="text" class="form-control" value="{{$detail->harga_terendah}}" name="harga_terendah" placeholder="" aria-label=""
-                                    aria-describedby="basic-addon1">
+                                    aria-describedby="basic-addon1"required>
                             </div>    
                             <div class="input-group mb-3">
                                 Harga Tertinggi
                                 <span class="input-group-text" id="basic-addon1">Rp</span>
                                 <input type="text" class="form-control" value="{{$detail->harga_tertinggi}}" name="harga_tertinggi" placeholder="" aria-label=""
-                                    aria-describedby="basic-addon1">
+                                    aria-describedby="basic-addon1"required>
                             </div>
                         </div>
                     </div>
@@ -134,34 +134,32 @@
             @include('sidebarLayanan')
         </div>
     </div>
-    <div class="col">
-        
+    <div class="col">     
         <div class="editLayanan">
             <div class="title">Untitled Layanan</div>
-            <div class="info-container">
-                
+            <div class="info-container">   
                     {{ csrf_field() }}
                     <h4>Detail Informasi Layanan</h4>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Upload Thumbnail Layanan
+                            Upload Thumbnail Layanan<span class="req">*</span>
                         </label>
-                        <input class="form1 form-control" type="file" name="foto" id="formFile">
+                        <input class="form1 form-control" type="file" name="foto" id="formFile"required>
                     </div>
         
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Nama Layanan
+                            Nama Layanan<span class="req">*</span>
                         </label>
                         <input name="nama_layanan" class="form-control" id="exampleFormControlInput1"
-                            placeholder="Tulis Nama Layanan...">
+                            placeholder="Tulis Nama Layanan..."required>
                     </div>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Deskripsi Layanan
+                            Deskripsi Layanan<span class="req">*</span>
                         </label>
                         <div class="card-body">
-                            <textarea id="summernote" name="keterangan">
+                            <textarea id="summernote" name="keterangan"required>
                             Place <em>some</em> <u>text</u> <strong>here</strong>
                             </textarea>
                         </div>
@@ -169,15 +167,15 @@
                     <div class="divider w-100"></div>
                     <div className="row align-items-center">
                         <label for="formFile" class="form-label">
-                            Merk Handphone yang dilayani
+                            Merk Handphone yang dilayani<span class="req">*</span>
                         </label>
                         <div class="input-group mb-3">
                             <input name="merk_hp" type="text" class="form-control" placeholder="" aria-label="Recipient's username"
-                                aria-describedby="button-addon2">
-                            {{-- <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-bs-toggle="modal"
+                                aria-describedby="button-addon2"required>
+                            <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon2" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 Tambahkan Merk
-                            </button> --}}
+                            </button> -->
                             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                                 aria-hidden="true">
                                 <div class="modal-dialog">
@@ -213,20 +211,20 @@
                     <div class="divider w-100"></div>
                     <div class="row align-items-center">
                         <label for="exampleFormControlTextarea1" class="form-label">
-                            Range Harga
+                            Range Harga<span class="req">*</span>
                         </label>
                         <div class="d-flex">     
                             <div class="input-group mb-3">
                                 Harga Terendah
                                 <span class="input-group-text" id="basic-addon1">Rp</span>
                                 <input type="text" class="form-control" name="harga_terendah" placeholder="" aria-label=""
-                                    aria-describedby="basic-addon1">
+                                    aria-describedby="basic-addon1"required>
                             </div>    
                             <div class="input-group mb-3">
                                 Harga Tertinggi
                                 <span class="input-group-text" id="basic-addon1">Rp</span>
                                 <input type="text" class="form-control" name="harga_tertinggi" placeholder="" aria-label=""
-                                    aria-describedby="basic-addon1">
+                                    aria-describedby="basic-addon1"required>
                             </div>
                         </div>
                     </div>
@@ -243,7 +241,7 @@
                         <button type="submit" class="btn btn-outline-success">
                             Simpan</button>
                     </div> --}}
-                    <button class="btn btn-primary btn-1 w-100" type="submit">Publish Layanan</button>
+                    <button class="btn btn-outline-primary btn-1 w-100" type="submit">Publish Layanan</button>
                 </div>
             </div>
         
