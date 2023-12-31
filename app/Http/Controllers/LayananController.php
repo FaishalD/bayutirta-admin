@@ -20,6 +20,14 @@ class LayananController extends Controller
         return view("layanan.infoLayanan");
     }
 
+    public function layanandetail(string $id)
+    {
+        $detail = Layanan::where('id_layanan', '=', $id)->first();
+        return view('layanan.infoLayanan',[
+            'detail' => $detail,
+        ]);
+    }
+
     public function layanan()
     {
         $layanans = Layanan::all();
@@ -49,6 +57,7 @@ class LayananController extends Controller
 
     public function addLayanan(Request $request)
     {
+        // dd($request);
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
             'harga_terendah' => 'required',
@@ -94,22 +103,53 @@ class LayananController extends Controller
         // return response()->json($post); // Return the new post as JSON
     }
 
-    public function updateLayanan(Request $request, Layanan $layanan) {
+    public function edit(Request $request, string $id) {
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
-            'harga' => 'required',
-            'keterangan' => 'required'
+            'harga_terendah' => 'required',
+            'harga_tertinggi' => 'required',
+            'keterangan' => 'required',
+            'merk_hp' => 'required',
         ]);
 
-        Course::where($request->id, $course->id)
+        if(isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])){
+            $file= $request->file('foto');
+            $filename= date('YmdHi').$file->getClientOriginalName()[0];
+            // Storage::disk('public')->url($filename);
+            // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
+            $file->storeAs('layanan', $filename, 'public');
+            // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
+            // $file-> move(public_path(), $filename);
+            // $request['foto']= $filename;
+            Layanan::where('id_layanan', '=', $id)->update([
+                'foto' => $filename
+            ]);
+        }
+
+        if(isset($_POST['status'])){                       
+            $status = 1;
+        } else {
+            $status = 0;
+        }
+
+
+        Layanan::where('id_layanan', '=', $id)
             ->update([
-                'nama_layanan'=> $request->nama_layanan,
-                'harga'=> $request->harga,
-                'status'=> $request->status,
-                'keterangan'=> $request->keterangan,
-                'update_at' => now(),
+                'nama_layanan' => $validatedData['nama_layanan'],
+                'harga_terendah' => $validatedData['harga_terendah'],
+                'harga_tertinggi' => $validatedData['harga_tertinggi'],
+                'merk_hp' => $validatedData['merk_hp'],
+                'status' => $status,
+                'keterangan' => $validatedData['keterangan'],
             ]);
 
-        return response()->json($posts);
+            return redirect('/layanan');
+    }
+
+    public function deleteLayanan(string $id)
+    {
+        Layanan::where('id_layanan', '=', $id)->delete();
+
+        return redirect('/layanan');
     }
 }
