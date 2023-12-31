@@ -31,7 +31,6 @@ class LayananController extends Controller
     {
         return view("layanan.additional");
     }
-
     public function review()
     {
         return view("layanan.reviewLayanan");
@@ -40,7 +39,6 @@ class LayananController extends Controller
     {
         return view("layanan.qna");
     }
-
     public function getLayanan()
     {
         $posts = Layanan::all(); // Retrieve all posts from the database
@@ -51,7 +49,9 @@ class LayananController extends Controller
 
     public function addLayanan(Request $request)
     {
-        dd($request);
+
+        // dd($request);
+
         $validatedData = $request->validate([
             'nama_layanan' => 'required|max:255',
             'harga_terendah' => 'required',
