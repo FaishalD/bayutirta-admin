@@ -49,7 +49,9 @@ class LoginController extends Controller
             // echo 'login sukses';
             // return redirect('/');
         }else {
-            return redirect('/api/error');
+            return view('login.login',[
+                'msg'=>'login gagal'
+            ]);
         }
         // return response()->$pos; // Return the data as JSON
     }

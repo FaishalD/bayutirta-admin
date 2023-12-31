@@ -44,6 +44,9 @@
                                 Masuk
                             </button>
                         </div>
+                        @if (isset($msg))
+                            <h1>{{$msg}}</h1>
+                        @endif
                     </form>
                 </div>
             </div>
