@@ -3,3 +3,17 @@
     height: 100vh;
     object-fit: fill;    
 }
+
+.req {
+    color: red;
+}
+
+.btn-1 {
+  background-color: #5a52f3!important;
+  border-color: transparent!important;
+}
+
+.btn-1:hover {
+  background-color: #4f46e5!important;
+  border-color: transparent!important;
+}
