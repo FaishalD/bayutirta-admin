@@ -35,7 +35,7 @@
                     <div class="row">
                         <div class="col">
                             <p class="fw-bold">Merk</p>
-                            Vivo
+                            {{$item->merk_hp}}
                         </div>
                         <div class="col">
                             <p class="fw-bold">Status</p>
@@ -51,7 +51,7 @@
                     <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
                             <a href="{{ url("/layanan/delete/$item->id_layanan") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
-                            <a href="{{ url("/layanan/$item->id_layanan") }}"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
+                            <a href="{{ url("/layanan/$item->id_layanan") }}"><button type="button" class="btn btn-3 btn-sm btn-outline-primary">Edit</button></a>
                         </div>
                     </div>
                 </div>
