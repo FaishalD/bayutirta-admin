@@ -27,13 +27,14 @@
         </div>
         @endforeach
         @else
-        <div class="picture">
-            <img src="/img/ALT 4.png" alt="noservice">
-        </div>
-        <div class="message text-center">
-            <h3 class="fw-bold">Belum ada Ulasan yang dibuat</h3>
-            <p>Buat dan atur layanan yang bisa diakses pelangganmu!</p>
-            <p>Klik button “Tambah Layanan” di atas kanan halaman ini</p>
+        <div class="katalog">
+            <div class="picture">
+                <img src="/img/ALT 4.png" alt="noservice">
+            </div>
+            <div class="message text-center">
+                <h3 class="fw-bold">Belum ada Ulasan yang dibuat</h3>
+                <p>Pastikan halaman ini sudah tersambung dengan ulasan Google Maps</p>
+            </div>
         </div>
         @endif
     </div>

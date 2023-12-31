@@ -19,17 +19,64 @@
             Sort by
         </button>
     </div>
-    <div class="katalog">
-        @if (isset($layanan) AND $layanan->count()>0)
+    @if (isset($layanan) AND $layanan->count()>0)
+    <div class="card-list">
             @foreach ($layanan as $item)
-            <div>
-                <h1>{{$item->nama_layanan}}</h1>
-                <p>{{$item->harga}}</p>
-                <p>{{$item->status}}</p>
-                <p>{{$item->keterangan}}</p>
+            <div class="card" style="width: 18rem;">
+                @if ($item->foto)
+                    <img src="{{ url('public/images/'.$item->foto) }}"style="height: auto; width: auto;">
+                @endif
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <h4>{{$item->nama_layanan}}</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fw-bold">Merk</p>
+                            Vivo
+                        </div>
+                        <div class="col">
+                            <p class="fw-bold">Status</p>
+                            {{$item->status}}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p class="fw-bold">Keterangan</p>
+                            <p class="card-text">{{$item->keterangan}}</p>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center pt-3">
+                        <div class="btn-group">
+                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                        </div>
+                    </div>
+                </div>
             </div>
             @endforeach
+    </div>
+    <div class="pagination">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>     
+    </div>
         @else
+    <div class="katalog">
             <div class="picture">
                 <img src="/img/ALT 4.png" alt="noservice">
             </div>
