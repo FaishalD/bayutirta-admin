@@ -12,31 +12,32 @@
         <div class="additional">
             <h5>Pengaturan Tambahan</h5>
             <ul class="list-group">
-                <!-- <a href="/layanan/additional" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
+                {{-- <!-- <a href="/layanan/additional" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.additional') ? 'active' : '' }}">
                         <p>Additional Info</p>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         </div> 
-                </a>
-                <a href="/layanan/review" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
+                </a> 
+                 <a href="/layanan/review" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.reviewLayanan') ? 'active' : '' }}">
                         <p>Review</p>
                         <div class="form-check form-switch">
                             <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         </div> 
-                </a> -->
+                </a> --> --}}
                  <a href="/layanan/qna" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center
                         {{ Request::is('layanan.qna') ? 'active' : '' }}">
-                        <p>QNA</p>
+                        <p>Active?</p>
                         <div class="form-check form-switch">
                             <input class="form-check-input" name="status" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         </div> 
                 </a>
             </ul>
         </div>
-        <!-- <div class="divider w-100"></div>          
-        <a class="btn btn-primary btn-1 w-100" role="button">     
-        Publish Layanan</a> -->
+        <div class="divider w-100"></div>
+        {{-- <a href="" class="btn btn-primary btn-1 w-100" role="button">
+            Publish Layanan
+        </a> --}}
     </div>
 </div>
