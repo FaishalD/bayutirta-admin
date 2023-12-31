@@ -50,8 +50,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
-                            <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <a href="{{ url("/layanan/delete/$item->id_layanan") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
+                            <a href="{{ url("/layanan/$item->id_layanan") }}"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
                         </div>
                     </div>
                 </div>

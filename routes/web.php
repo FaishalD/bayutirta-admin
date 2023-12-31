@@ -38,6 +38,9 @@ Route::get('/layanan/additional', [LayananController::class, 'additional']);
 Route::get('/layanan/review', [LayananController::class, 'review']);
 Route::get('/layanan/qna', [LayananController::class, 'qna']);
 Route::post('/layanan/add', [LayananController::class, 'addLayanan']);
+Route::get('/layanan/delete/{id}', [LayananController::class, 'deleteLayanan']);
+Route::get('/layanan/{id}', [LayananController::class, 'layanandetail']);
+Route::post('/layanan/editLayanan/{id}', [LayananController::class, 'edit']);
 
 
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
