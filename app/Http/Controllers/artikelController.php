@@ -19,6 +19,15 @@ class artikelController extends Controller
     public function editArtikel() {
         return view ('artikel.editArtikel');
     }
+
+    public function articledetail(string $id)
+    {
+        $detail = Artikel::where('id_artikel', '=', $id)->first();
+        return view('artikel.editArtikel',[
+            'detail' => $detail,
+        ]);
+    }
+
     public function getArtikel()
     {
         $posts = Artikel::all(); // Retrieve all posts from the database
@@ -57,6 +66,41 @@ class artikelController extends Controller
         ]);
 
         $post->save(); // Save the new post to the database
+
+        return redirect('artikel'); // Return the new post as JSON
+    }
+
+    public function edit(Request $request, string $id)
+    {
+        // dd($request);
+        $validatedData = $request->validate([
+            'judul' => 'required|max:255',
+            'nama_penulis' => 'required',
+            'title_penulis' => 'required',
+            'isi' => 'required'
+        ]);
+        if(isset($_FILES["foto"]) && !empty($_FILES["foto"]["name"])){
+            $file= $request->file('foto');
+            $filename= date('YmdHi').$file->getClientOriginalName()[0];
+            // Storage::disk('public')->url($filename);
+            // Storage::putFile('photos', new File('admin.bayutirta.masuk.id/public/Image'), $filename);
+            $file->storeAs('images', $filename, 'public');
+            // $file->move('admin.bayutirta.masuk.id/public/Image' , $filename);
+            // $file-> move(public_path(), $filename);
+            // $request['foto']= $filename;
+            Artikel::where('id_artikel', '=', $id)->update([
+                'foto' => $filename
+            ]);
+        }
+
+
+        // Create a new Post instance with the validated data
+        Artikel::where('id_artikel', '=', $id)->update([
+            'judul' => $validatedData['judul'],
+            'nama_penulis' => $validatedData['nama_penulis'],
+            'title_penulis' => $validatedData['title_penulis'],
+            'isi' => $validatedData['isi']
+        ]);
 
         return redirect('artikel'); // Return the new post as JSON
     }
