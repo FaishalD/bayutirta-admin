@@ -79,4 +79,14 @@ class ReservasiController extends Controller
 
         return response()->json($post); // Return the new post as JSON
     }
+
+    public function updateReservasi(string $id, string $status) {
+
+        Reservasi::where('id_reservasi', '=', $id)
+            ->update([
+                'status'=> $status,
+            ]);
+
+        return redirect('/reservasi');
+    }
 }

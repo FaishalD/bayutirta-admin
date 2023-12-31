@@ -4,7 +4,7 @@
 <div class="artikel">
     <div class="titleWarp">
         <div class="artikelTitle">Artikel</div>
-        <a href="/artikel/edit" class="btn btn-primary btn-1" role="button">
+        <a href="/artikel/add" class="btn btn-primary btn-1" role="button">
             <ion-icon name="add-circle" class="icon-1"></ion-icon>
             Tambah Artikel
         </a>
@@ -32,7 +32,7 @@
                     <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
                             <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <a href="{{ url("/artikel/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
                         </div>
                         <small class="text-body-secondary">9 mins</small>
                     </div>

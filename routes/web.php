@@ -26,6 +26,7 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [dashboardController::class, 'dashboard'])->middleware('auth')->name('dashboard');
 Route::get('/reservasi', [ReservasiController::class,'reservasi']);
+Route::get('/reservasi/{id}/{status}', [ReservasiController::class,'updateReservasi']);
 
 
 Route::get('/ulasan', [UlasanController::class, 'ulasan']);
@@ -40,8 +41,10 @@ Route::post('/layanan/add', [LayananController::class, 'addLayanan']);
 
 
 Route::get('/artikel', [artikelController::class, 'artikel'])->name('artikel');
-Route::get('/artikel/edit', [artikelController::class, 'editArtikel']);
+Route::get('/artikel/add', [artikelController::class, 'editArtikel']);
+Route::get('/artikel/{id}', [artikelController::class, 'articledetail']);
 Route::post('/artikel/addArtikel', [artikelController::class, 'addArtikel'])->name('addArtikel');
+Route::post('/artikel/editArtikel/{id}', [artikelController::class, 'edit']);
 Route::get('/artikel/delete/{id}', [artikelController::class, 'deleteArtikel'])->name('deleteArtikel');
 
 Route::get('/', [LoginController::class, 'login'])->middleware('guest')->name('login');
