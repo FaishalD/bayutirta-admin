@@ -50,7 +50,7 @@ class LoginController extends Controller
             // return redirect('/');
         }else {
             return view('login.login',[
-                'msg'=>'login gagal'
+                'msg'=>'Pastikan username/password yang anda masukkan sudah benar.'
             ]);
         }
         // return response()->$pos; // Return the data as JSON

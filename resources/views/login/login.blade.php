@@ -17,7 +17,7 @@
                         @csrf
                         <div class="d-flex flex-column gap-2">
 
-                            <label for="username" class="form-label fw-bold">Username</label>
+                            <label for="username" class="form-label fw-bold">Username<span class='req'>*<span></label>
                             <input
                                 id="username"
                                 name="username"
@@ -28,7 +28,7 @@
                             />
                         </div>
                         <div class="d-flex flex-column gap-2">
-                            <label for="inputPassword5" class="form-label fw-bold">Kata Sandi</label>
+                            <label for="inputPassword5" class="form-label fw-bold">Kata Sandi<span class='req'>*<span></label>
                             <input
                                 type="password"
                                 id="inputPassword5"
@@ -38,15 +38,15 @@
                                 aria-describedby="passwordHelpBlock"
                                 required
                             />
+                            @if (isset($msg))
+                            <span class='req'>{{$msg}}<span>
+                            @endif
                         </div>
                         <div class="button">
-                            <button type="submit" class="btn btn-primary btn-2">
+                            <button type="submit" class="btn btn-1 btn-primary btn-2">
                                 Masuk
                             </button>
-                        </div>
-                        @if (isset($msg))
-                            <h1>{{$msg}}</h1>
-                        @endif
+                        </div>                        
                     </form>
                 </div>
             </div>
