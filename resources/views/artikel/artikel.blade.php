@@ -19,8 +19,8 @@
             Sort by
         </button>
     </div>
+    @if (isset($artikel)AND $artikel->count()>0)
     <div class="card-list">
-        @if (isset($artikel)AND $artikel->count()>0)
             @foreach ($artikel as $item)
             <div class="card" style="width: 18rem;">
                 @if ($item->foto)
@@ -39,7 +39,26 @@
                 </div>
             </div>
             @endforeach
+    </div>
+    <div class="pagination">
+        <nav aria-label="...">
+            <ul class="pagination">
+                <li class="page-item disabled">
+                    <a class="page-link">Previous</a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item" aria-current="page">
+                    <a class="page-link" href="#">2</a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+            </ul>
+        </nav>     
+    </div>
         @else
+    <div class="katalog">
             <div class="picture">
                 <img src="/img/ALT 4.png" alt="noservice">
             </div>
@@ -47,24 +66,9 @@
                 <h3 class="fw-bold">Belum ada artikel yang dibuat</h3>
                 <p>Buat dan atur artikel yang bisa diakses pelangganmu!</p>
                 <p>Klik button “Tambah artikel” di atas kanan halaman ini</p>
-            </div>
+            </div>           
         @endif
     </div>
-    <nav aria-label="...">
-        <ul class="pagination">
-            <li class="page-item disabled">
-                <a class="page-link">Previous</a>
-            </li>
-            <li class="page-item active"><a class="page-link" href="#">1</a></li>
-            <li class="page-item" aria-current="page">
-                <a class="page-link" href="#">2</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-            </li>
-        </ul>
-    </nav>
 </div>
 
 
