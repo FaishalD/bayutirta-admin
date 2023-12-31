@@ -32,9 +32,9 @@
                     <div class="d-flex justify-content-between align-items-center pt-3">
                         <div class="btn-group">
                             <a href="{{ url("/artikel/delete/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-danger">Delete</button></a>
-                            <a href="{{ url("/artikel/$item->id_artikel") }}"><button type="button" class="btn btn-sm btn-outline-secondary">Edit</button></a>
+                            <a href="{{ url("/artikel/$item->id_artikel") }}"><button type="button" class="btn btn-3 btn-sm btn-outline-secondary">Edit</button></a>
                         </div>
-                        <small class="text-body-secondary">9 mins</small>
+                        <small class="text-body-secondary">{{$item->created_at->format('d-m-Y')}}</small>
                     </div>
                 </div>
             </div>

@@ -19,10 +19,11 @@
   font-weight: 700;
 }
 
-.btn-1 {
+.btn-1:hover {
   background-color: #4f46e5!important;
   border-color: transparent!important;
 }
+
 
 .catSort {
   gap: 16px;
@@ -33,6 +34,17 @@
   color: black!important;
   background-color: white!important; 
   border-color: #D8DCDF!important;
+}
+
+.btn-3 {
+  color: #4f46e5!important;
+  border-color: #4f46e5!important;
+}
+
+.btn-3:hover {
+  color: #FFF!important;
+  background-color: #4f46e5!important;
+  border-color: transparent!important;
 }
 
 .katalog {
