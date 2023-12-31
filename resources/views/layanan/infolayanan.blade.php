@@ -1,6 +1,7 @@
 @extends('mainLayanan')
 @section('content') 
 <form action="/layanan/add" class="info" method="POST" enctype="multipart/form-data">
+
 <div class="row">
     <div class="col">
         <div class="sideLayanan">
